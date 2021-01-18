@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  BoxTest
 //
-//  Created by 严建民 on 2021/1/16.
-//  Copyright © 2021 严建民. All rights reserved.
+//  Created by YJianMu on 2021/1/16.
+//  Copyright © 2021 YJianMu. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <BoxTest-Swift.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //初始化BoxSDK,ClientId和clientSecret前往box官网注册应用
+    //info.plist中的CFBundleURLSchemes boxsdk-clientId也要替换
+    [[BoxTools sharedInstance] initBoxSDKWithClientId:@"svgdg6ekzvdhr2za0gqi9r78st54pkjh" clientSecret:@"KjjMQHPEvuqvCWEtFhrn5q9TE2WZXWUM"];
+    
     return YES;
 }
 
